@@ -1,0 +1,8 @@
+aws dynamodb create-table --table-name vinculo_propostas --attribute-definitions AttributeName=id_proposta,AttributeType=S --key-schema AttributeName=id_proposta,KeyType=HASH --provisioned-throughput ReadCapacityUnits=10,WriteCapacityUnits=5 --endpoint-url http://localhost:8000
+
+
+aws dynamodb put-item --table-name vinculo_propostas --item '{"id_proposta": {"S": "3937ed5b-e8cf-4803-b0a5-8152d2529c70"},"id_agente": {"S": "0001"}  ,"data_inclusao": {"S": "2021-08-20T01:30:36+00:00"}}' --endpoint-url http://localhost:8000
+
+aws dynamodb put-item --table-name vinculo_propostas --item '{"id_proposta": {"S": "19aaaa16-bfc7-4c89-866c-b13b1323931b"},"id_agente": {"S": "0001"}  ,"data_inclusao": {"S": "2021-08-20T01:44:56+00:00"}}' --endpoint-url http://localhost:8000
+
+aws dynamodb put-item --table-name vinculo_propostas --item '{"id_proposta": {"S": "01b114c7-9113-4ac2-bf37-b577785ddacb"},"id_agente": {"S": "0001"}  ,"data_inclusao": {"S": "2021-08-20T01:46:37+00:00"}}' --endpoint-url http://localhost:8000
